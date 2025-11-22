@@ -1,0 +1,48 @@
+.header {
+  color: var(--white);
+  padding: 10px 20px; /* diminui o espaço interno */
+  display: flex;
+  justify-content: flex-start; /* cola logo e menu */
+  align-items: center;
+  gap: 20px; /* distância entre logo e menu */
+  
+}
+
+/* Aproxima o menu da logo */
+.nav {
+  display: flex;
+  gap: 15px; /* reduz o espaçamento entre links */
+}
+
+.nav a {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Logo menor e mais encaixada */
+.logoImg {
+  width: 200px;
+  height: auto;
+}
+
+/* 🔥 RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px; /* menos espaço ainda */
+    padding: 10px;
+  }
+
+  .logoImg {
+    width: 150px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+}

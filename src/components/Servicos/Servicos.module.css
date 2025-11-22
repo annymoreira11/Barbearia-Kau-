@@ -1,0 +1,21 @@
+.servicos {
+ 
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+
+.servicos ul li {
+  background-color: var(--blue);
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  list-style: none;
+}
+

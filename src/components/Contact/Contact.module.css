@@ -1,0 +1,14 @@
+.contact {
+
+
+padding: 60px 20px;
+text-align: center;
+}
+.button {
+background: var(--red);
+color: var(--black);
+padding: 14px 28px;
+border-radius: 6px;
+text-decoration: none;
+display: inline-block;
+margin-top: 20px;}
