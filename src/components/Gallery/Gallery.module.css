@@ -11,16 +11,16 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* sempre 2 por linha */
   gap: 20px;
+  max-width: 500px; /* opcional: deixa o grid mais bonito */
+  margin: 0 auto;
 }
 
 .card {
   width: 100%;
-  max-width: 160px;
   aspect-ratio: 3 / 4;
   background-size: cover;
   background-position: center;
   border-radius: 12px;
-  margin: 0 auto;
 }

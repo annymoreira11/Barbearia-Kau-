@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Fundo desfocado + degradê + imagem mais baixa */
+/* Fundo desfocado */
 body::before {
   content: "";
   position: fixed;
@@ -14,19 +14,38 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  
-  background-image: 
-    url("/image.png"); /* sua imagem */
-  
+
+  background-image: url("/image.png");
   background-size: cover;
-  
-  /* 🔥 DESCE A IMAGEM (ajusta aqui se quiser mais ou menos) */
   background-position: center 38%;
-  
   background-repeat: no-repeat;
 
   filter: blur(5px) brightness(0.7);
   z-index: -1;
 }
 
+/* 📱--------------- CELULAR (telas pequenas) ----------- */
+@media (max-width: 600px) {
+  body::before {
+    background-size: cover;
+    background-position: center 55%; /* desce mais para enquadrar melhor */
+    filter: blur(4px) brightness(0.6);
+  }
+}
+
+/* 📱➡️💻------- TABLET (telas médias) ----------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body::before {
+    background-position: center 45%;
+    filter: blur(5px) brightness(0.7);
+  }
+}
+
+/* 💻------------- TELAS GRANDES (PC) ------------ */
+@media (min-width: 1025px) {
+  body::before {
+    background-position: center 38%; /* posição original */
+    filter: blur(6px) brightness(0.75);
+  }
+}
 

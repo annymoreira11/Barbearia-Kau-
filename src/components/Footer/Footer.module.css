@@ -1,7 +1,9 @@
 .footer {
-background: var(--black);
-color: var(--white);
-text-align: center;
-padding: 20px;
-border-top: 2px solid var(--red);
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid var(--red);
+  font-size: 1rem;
 }
+
