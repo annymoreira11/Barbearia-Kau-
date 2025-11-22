@@ -1,14 +1,14 @@
 .servicos {
+ 
   padding: 40px 20px;
   text-align: center;
-  max-width: 700px; /* deixar mais organizado no PC */
-  margin: 0 auto;
 }
 
-.servicos h2 {
+h2 {
   font-size: 2rem;
   margin-bottom: 30px;
 }
+
 
 .servicos ul li {
   background-color: var(--black);
@@ -17,37 +17,5 @@
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   list-style: none;
-  font-size: 1rem;
 }
 
-/* 📱 Telas pequenas (CELULAR) */
-@media (max-width: 600px) {
-  .servicos {
-    padding: 30px 15px;
-  }
-
-  .servicos h2 {
-    font-size: 1.6rem;
-  }
-
-  .servicos ul li {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-}
-
-/* 💻 Telas grandes (PC grande) */
-@media (min-width: 1200px) {
-  .servicos {
-    max-width: 900px;
-  }
-
-  .servicos h2 {
-    font-size: 2.3rem;
-  }
-
-  .servicos ul li {
-    font-size: 1.1rem;
-    padding: 14px;
-  }
-}

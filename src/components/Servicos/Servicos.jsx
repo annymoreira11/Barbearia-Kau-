@@ -15,10 +15,6 @@ export default function Services() {
         <li>Luzes — R$40,00</li>
         <li>Platinado — R$70,00</li>
       </ul>
-
-      <p style={{ fontSize: "12px", marginTop: "10px" }}>
-        (Sobrancelha inclusa no corte)
-      </p>
     </div>
   );
 }

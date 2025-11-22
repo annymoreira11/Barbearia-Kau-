@@ -10,42 +10,51 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
+  inset: 0; /* substitui top/left/width/height */
+  
   background-image: url("/image.png");
   background-size: cover;
-  background-position: center 38%;
+  background-position: center 40%;
   background-repeat: no-repeat;
 
   filter: blur(5px) brightness(0.7);
   z-index: -1;
+
+  /* Mantém o fundo estável onde funciona */
+  background-attachment: fixed;
 }
 
-/* 📱--------------- CELULAR (telas pequenas) ----------- */
+/* 📱 CELULAR (telas pequenas) */
 @media (max-width: 600px) {
   body::before {
+    /* Fundo no celular NÃO usa fixed (bug iOS/Android) */
+    background-attachment: scroll;
+
+    /* Enquadramento estável */
+    background-position: center 50%;
     background-size: cover;
-    background-position: center 55%; /* desce mais para enquadrar melhor */
-    filter: blur(4px) brightness(0.6);
+
+    /* Ajuste sutil no filtro */
+    filter: blur(5px) brightness(0.65);
   }
 }
 
-/* 📱➡️💻------- TABLET (telas médias) ----------- */
+/* 📱➡️💻 TABLET */
 @media (min-width: 601px) and (max-width: 1024px) {
   body::before {
     background-position: center 45%;
     filter: blur(5px) brightness(0.7);
+    background-attachment: scroll; /* mais estável no tablet */
   }
 }
 
-/* 💻------------- TELAS GRANDES (PC) ------------ */
+/* 💻 COMPUTADOR */
 @media (min-width: 1025px) {
   body::before {
-    background-position: center 38%; /* posição original */
+    background-position: center 40%;
     filter: blur(6px) brightness(0.75);
+
+    /* No PC o fixed funciona perfeitamente */
+    background-attachment: fixed;
   }
 }
-
